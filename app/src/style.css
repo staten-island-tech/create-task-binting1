@@ -14,8 +14,8 @@ html,
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(192, 167, 167, 0.87);
+  background-color: #e9dcdc;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,3 +28,12 @@ h1 {
   font-size: 4rem;
 }
 
+.play {
+  border:#ffc3c3;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  height: 5rem;
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  
+}

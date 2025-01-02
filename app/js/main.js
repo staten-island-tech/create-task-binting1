@@ -7,16 +7,27 @@ const DOMSelectors = {
 
 };
 
-function createCard (desserts) {
-    desserts.forEach((desserts) => DOMSelectors.container.insertAdjacentHTML("beforeend", 
-        `<div class="card">
-            <h2 class="title">${desserts.name}</h2>
-
+function startingPage () {
+    DOMSelectors.start.insertAdjacentHTML("beforeend", 
+        `<div class="play"> 
+            <h2 class="title">Which Dessert Are You?</h2>
+            <button class="start">start</button>
         </div>`
-    ));
+    );
 };
 
-createCard (desserts); 
+startingPage (); 
+
+document.querySelector(".start").addEventListener("click", function (){
+    DOMSelectors.start.innerHTML = "";
+    DOMSelectors.container.insertAdjacentElement("beforeend", 
+        `<div class="card"> 
+            <h2>${questions.question}</h2>
+        </div>`
+    )
+});
+
+
 
 // function beginningPage () {
 //     DOMSelectors.start.insertAdjacentHTML("beforeend", 
