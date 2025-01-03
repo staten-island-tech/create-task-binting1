@@ -1,5 +1,6 @@
 import '/src/style.css'
 import { desserts } from '/js/desserts.js'
+import {questions} from '/js/questions.js'
 
 const DOMSelectors = {
     start:document.querySelector(".start"),
@@ -11,22 +12,16 @@ function startingPage () {
     DOMSelectors.start.insertAdjacentHTML("beforeend", 
         `<div class="play"> 
             <h2 class="title">Which Dessert Are You?</h2>
-            <button class="start">start</button>
+            <button class="btn">start</button>
         </div>`
     );
-};
+}; 
 
 startingPage (); 
 
-document.querySelector(".start").addEventListener("click", function (){
+document.querySelector(".btn").addEventListener("click", function (){
     DOMSelectors.start.innerHTML = "";
-    DOMSelectors.container.insertAdjacentElement("beforeend", 
-        `<div class="card"> 
-            <h2>${questions.question}</h2>
-        </div>`
-    )
 });
-
 
 
 // function beginningPage () {

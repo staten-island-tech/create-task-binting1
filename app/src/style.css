@@ -37,3 +37,13 @@ h1 {
   margin-right: auto;
   
 }
+
+.card {
+  border:#ffc3c3;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  height: 5rem;
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
