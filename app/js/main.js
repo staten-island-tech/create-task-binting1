@@ -21,7 +21,16 @@ startingPage ();
 
 document.querySelector(".btn").addEventListener("click", function (){
     DOMSelectors.start.innerHTML = "";
+  
+    DOMSelectors.container.insertAdjacentHTML("beforeend", 
+        `<div class="play"> 
+            <h2 class="questions"></h2>
+            <button class="btn">start</button>
+        </div>`
+    );
+
 });
+
 
 
 // function beginningPage () {
