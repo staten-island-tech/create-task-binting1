@@ -22,24 +22,34 @@ startingPage ();
 document.querySelector(".btn").addEventListener("click", function (){
     DOMSelectors.start.innerHTML = "";
   
-    DOMSelectors.container.insertAdjacentHTML("beforeend", 
+    questions.forEach((question) => DOMSelectors.container.insertAdjacentHTML("beforeend", 
         `<div class="play"> 
-            <h2 class="questions"></h2>
-            <button class="btn">start</button>
+            <h2 class="questions">${question.prompt}</h2>
+            <button class="blueberry">${questions.answer}</button>
+            <button class="strawberry">${questions.answer}</button>
+            <button class="tiramisu">${questions.answer}</button>
+            <button class="cherry">${questions.answer}</button>
+            <button class="creme brulee">${questions.answer}</button>
         </div>`
+    ));
+    DOMSelectors.container.insertAdjacentHTML("beforeend", 
+        `
+        <button class="restart">Restart</button>
+        <button class="submit">Submit</button>
+        `
     );
-
 });
 
+document.querySelector(".restart").addEventListener("click", function () {
+    DOMSelectors.container.innerHTML = "";
+    startingPage ();
+});
 
-
-// function beginningPage () {
-//     DOMSelectors.start.insertAdjacentHTML("beforeend", 
-//         `<div class="beginning">
-//             <h2></h2>
-//         </div>`
-//     )
-// }
+//get rid of start div to see if you can use container div only instead to return to starting page
+//come up with one more question 
+//find out a way to link the answer to the corresponding dessert 
+//use algorithm to calculate the final result 
+//finish writing descriptions for each dessert 
 
 //question 1: where would you spend your weekend if you had no work or projects to worry about 
 //blueberry: the beach 
@@ -74,5 +84,3 @@ document.querySelector(".btn").addEventListener("click", function (){
 // with people you consider irrelevant in your life. 
 
 //straw: You are widely known as a sweet person 
-
-//++++ come up with 7 questions 
