@@ -19,16 +19,18 @@ startingPage ();
 document.querySelector(".btn").addEventListener("click", function (){
     DOMSelectors.container.innerHTML = "";
   
-    questions.forEach((question) => DOMSelectors.container.insertAdjacentHTML("beforeend", 
-        `<div class="play"> 
-            <h2 class="questions">${question.prompt}</h2>
-            <button class="blueberry">${answer.text}</button>
-            <button class="strawberry">${questions.answer.text}</button>
-            <button class="tiramisu">${questions.answer.text}</button>
-            <button class="cherry">${questions.answer.text}</button>
-            <button class="creme brulee">${questions.answer.text}</button>
-        </div>`
-    ));
+        questions.forEach((question) => {DOMSelectors.container.insertAdjacentHTML("beforeend", 
+            `<div class="prompts"> 
+                <h2 class="questions">${question.prompt}</h2>
+            </div>`
+        );
+
+        question.answer.forEach((answer) => {DOMSelectors.container.insertAdjacentHTML("beforeend", 
+        `<button class="answers">${answer.text}</button>`
+        );
+    });
+});
+
     DOMSelectors.container.insertAdjacentHTML("beforeend", 
         `
         <button class="restart">Restart</button>
@@ -43,6 +45,7 @@ document.querySelector(".btn").addEventListener("click", function (){
 
 });
 
+questions.filter((question) => question.answer.dessert === "blueberry");
 
 
 //get rid of start div to see if you can use container div only instead to return to starting page
