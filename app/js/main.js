@@ -45,8 +45,19 @@ document.querySelector(".btn").addEventListener("click", function (){
 
 });
 
-questions.filter((question) => question.answer.dessert === "blueberry");
+    // questions.filter((question) => question.answer.dessert === "blueberry");
+    // questions.forEach((question) => console.log((question.answer.dessert)));
 
+// function returnResult (dessert) {
+//     let result; 
+//     if(question.dessert === "blueberry") {
+//         result = "blueberry";
+//     } else {
+//         result = "not blueberry"; 
+//     }
+//     return result; 
+//     }
+// console.log(returnResult);
 
 //get rid of start div to see if you can use container div only instead to return to starting page
 //come up with one more question 
