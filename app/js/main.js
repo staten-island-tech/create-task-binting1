@@ -19,14 +19,12 @@ startingPage ();
 document.querySelector(".btn").addEventListener("click", function (){
     DOMSelectors.container.innerHTML = "";
   
-        questions.forEach((question) => {DOMSelectors.container.insertAdjacentHTML("beforeend", 
-            `<div class="prompts"> 
-                <h2 class="questions">${question.prompt}</h2>
-            </div>`
+        questions.forEach((question, questionIndex) => {DOMSelectors.container.insertAdjacentHTML("beforeend", 
+            `<h2 class="questions">${question.prompt}</h2>`
         );
 
-        question.answer.forEach((answer) => {DOMSelectors.container.insertAdjacentHTML("beforeend", 
-        `<button class="answers">${answer.text}</button>`
+        question.answers.forEach((answer, answerIndex) => {DOMSelectors.container.insertAdjacentHTML("beforeend", 
+            `<button class="answers" data-question-index="${questionIndex}" data-answer-index="${answerIndex}">${answer.text}</button>`
         );
     });
 });
@@ -38,12 +36,27 @@ document.querySelector(".btn").addEventListener("click", function (){
         `
     );
 
+    document.querySelectorAll(".answers").forEach((button) => {
+        button.addEventListener("click", (event) => {
+        const questionIndex = event.target.getAttributes("data-question-index");
+        const answerIndex = event.target.getAttributes("data-answer-index");
+    
+        questions[questionIndex].answers[answerIndex].desserts++; 
+        console.log(`updated dessert value for ${questionIndex}, answer${answerIndex}:`,
+            questions[questionIndex].answers[answersIndex].dessert);
+
+    
+    });
+    });
+
     document.querySelector(".restart").addEventListener("click", function (){
         DOMSelectors.container.innerHTML='';
         //create a function to clear fields
     });
 
 });
+
+
 
     // questions.filter((question) => question.answer.dessert === "blueberry");
     // questions.forEach((question) => console.log((question.answer.dessert)));
