@@ -11,7 +11,7 @@ const DOMSelectors = {
 function startingPage () {
         DOMSelectors.startingContainer.insertAdjacentHTML("beforeend", 
         `<div class="play"> 
-            <h2 class="title">Which Dessert Are You?</h2>
+            <h2>Which Dessert Are You?</h2>
             <p>blueberry cake, strawberry cake, tiramisu, or cherry pie?</p>
             <button class="btn">start</button>
         </div>`
@@ -26,7 +26,7 @@ document.querySelector(".btn").addEventListener("click", function (){
     questions.forEach((question, index) => {
         const questionDiv = `
             <div class="question">
-                <h2 class="prompt">${question.prompt}</h2>
+                <p id="prompt">${question.prompt}</p>
                 <div class="answers" data-index="${index}">
                 ${question.answers.map(answer => `
                     <button class="answer" data-dessert="${answer.dessert}" data-question="${index}">${answer.text}</button>`
