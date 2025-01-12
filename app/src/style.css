@@ -82,6 +82,7 @@ h1 {
 
 .answer:hover {
   background-color: rgb(221, 219, 219);
+  box-shadow: none;
 }
 
 .greyed-out {
