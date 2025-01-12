@@ -9,12 +9,12 @@ html,
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(192, 167, 167, 0.87);
+  color: #c0a7a7de;
   background-color: #e9dcdc;
 
   font-synthesis: none;
@@ -31,35 +31,93 @@ h1 {
 .play {
   border:#ffc3c3;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  height: 40rem;
-  width: 40rem;
+  height: 20rem;
+  width: 30rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
+  text-align: center;
   
 }
 
-.prompts {
-  border:#ffc3c3;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  height: 5rem;
-  width: 40rem;
-  margin-left: auto;
-  margin-right: auto;
-  
+.btn {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 20px auto;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color:darkred;
+  border: solid palevioletred;
+  background-color: pink;
 }
 
-.card {
-  border:#ffc3c3;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  height: 5rem;
-  width: 10rem;
-  margin-left: auto;
-  margin-right: auto;
-  
+.btn:hover {
+  background-color: white;
 }
 
-.answers {
+.question {
+  border:solid #bb2e2e67;
+  box-shadow: 0 4px 8px 0 #e9b3b3;
+  height: 15rem;
+  width: 35rem;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.prompt {
+  font-weight: 700;
+  color: grey;
+}
+
+.answer {
+  font-family: 'Times New Roman', Times, serif;
   margin: 5px;
   display: flex;
-  
+  border: solid #bb2e2e67;
+  box-shadow: 0 2px 4px 0 #e9b3b3;
+  border-radius: 5px;
+  padding: 2px;
 }
+
+.answer:hover {
+  background-color: rgb(221, 219, 219);
+}
+
+.greyed-out {
+  background-color: #d3d3d3;  
+  color: #a1a1a1; 
+  pointer-events: none;  
+  opacity: 0.5;  
+}
+
+
+.submit {
+  font-family: 'Times New Roman', Times, serif;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  cursor: pointer;
+  color:darkred;
+  border: solid palevioletred;
+  background-color: pink;
+  border-radius: 10px;
+}
+
+.submit:hover {
+  color: black;
+  background-color:white;
+}
+
+.results {
+  border:#ffc3c3;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  height: 20rem;
+  width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+

@@ -1,53 +1,48 @@
 const questions = [
     {
-        prompt: "where would you spend your weekend if you had no work or projects to worry about?",
+        prompt: "Where would you spend your weekend if you had no work or projects to worry about?",
         answers: [
-            { blueberry: 0, text: "the beach" },
-            { strawberry: 0, text: "spend time with friends" },
-            { tiramisu: 0, text: "movie theater" },
-            { cherryPie: 0, text: "at home" },
-            { cremeBrulee: 0, text: "spa center" }
-        ],
+            { dessert: "blueberry", text: "Enjoying nature at a peaceful retreat" },
+            { dessert: "strawberry", text: "Having a fun outing with friends" },
+            { dessert: "tiramisu", text: "Exploring a new city or exciting adventure" },
+            { dessert: "cherryPie", text: "Relaxing at home with loved ones" }
+        ]
     },
     {
-        prompt: "what would you do if your friend had an argument with you?",
+        prompt: "What would you do if your friend had an argument with you?",
         answers: [
-            { blueberry: 0, text: "confront them and get it over with" },
-            { strawberry: 0, text: "offer alternatives to the problem" },
-            { tiramisu: 0, text: "wait for them to reach out" },
-            { cherryPie: 0, text: "try to understand them and soothe out their emotions" },
-            { cremeBrulee: 0, text: "ask someone else to resolve the problem" }
-        ],
+            { dessert: "blueberry", text: "Take time to reflect and then talk it out" },
+            { dessert: "strawberry", text: "Try to smooth things over and keep everyone happy" },
+            { dessert: "tiramisu", text: "Give them space and wait for them to come around" },
+            { dessert: "cherryPie", text: "Listen to their side and try to empathize with them" }
+        ]
     },
     {
-        prompt: "what would you do if you forgot to study for an upcoming test the night before?",
+        prompt: "What would you do if you forgot to study for an upcoming test the night before?",
         answers: [
-            { blueberry: 0, text: "study to your max capability and stop when you start to feel overwhelmed because of the workload" },
-            { strawberry: 0, text: "reach out to friends to study together" },
-            { tiramisu: 0, text: "worry more about the time than actually doing the studying" },
-            { cherryPie: 0, text: "end up staying all night studying for the test" },
-            { cremeBrulee: 0, text: "go to the beach" }
-        ],
+            { dessert: "blueberry", text: "Stay calm and study with focus until I feel prepared" },
+            { dessert: "strawberry", text: "Call up friends and try to study together" },
+            { dessert: "tiramisu", text: "Work on it as much as I can without stressing too much" },
+            { dessert: "cherryPie", text: "End up staying up all night to cram for the test" }
+        ]
     },
     {
         prompt: "Which format do you prefer the most when working on a persuasive argument?",
         answers: [
-            { blueberry: 0, text: "providing various stats and numbers to prove your point" },
-            { strawberry: 0, text: "practice speech to sound persuasive" },
-            { tiramisu: 0, text: "in the most simplistic and neat way, as long as it gets the job done" },
-            { cherryPie: 0, text: "carefully checks all the rubric and works based off of that" },
-            { cremeBrulee: 0, text: "providing creative artworks to get your inner voice across" }
-        ],
+            { dessert: "blueberry", text: "Use reliable data and facts to support my point" },
+            { dessert: "strawberry", text: "Use engaging storytelling and a clear structure" },
+            { dessert: "tiramisu", text: "Keep it straightforward with minimal fluff" },
+            { dessert: "cherryPie", text: "Check all the guidelines and adapt my argument to fit them" }
+        ]
     },
     {
         prompt: "What time of the day are you the most energetic?",
         answers: [
-            { blueberry: 0, text: "evening" },
-            { strawberry: 0, text: "all day" },
-            { tiramisu: 0, text: "never energetic" },
-            { cherryPie: 0, text: "in the morning" },
-            { cremeBrulee: 0, text: "at night" }
-        ],
+            { dessert: "blueberry", text: "Evening, when everything is peaceful and calm" },
+            { dessert: "strawberry", text: "All day, I'm always on the go and ready to socialize" },
+            { dessert: "tiramisu", text: "Never really energetic, I prefer to take things slow" },
+            { dessert: "cherryPie", text: "In the morning, when I feel refreshed and ready to start the day" }
+        ]
     }
 ];
 
