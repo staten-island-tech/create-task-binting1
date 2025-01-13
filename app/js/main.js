@@ -23,20 +23,16 @@ startingPage ();
 document.querySelector(".btn").addEventListener("click", function (){
     DOMSelectors.startingContainer.innerHTML = "";
   
-    questions.forEach((question, index) => {
-        const questionDiv = `
-            <div class="question">
-                <p id="prompt">${question.prompt}</p>
-                <div class="answers" data-index="${index}">
-                ${question.answers.map(answer => `
-                    <button class="answer" data-dessert="${answer.dessert}" data-question="${index}">${answer.text}</button>`
-                ).join('')}
-                </div>
+    questions.forEach((question, index) => { DOMSelectors.quizContainer.insertAdjacentHTML("beforeend", 
+    `<div class="question">
+        <p id="prompt">${question.prompt}</p>
+        <div class="answers" data-index="${index}">
+        ${question.answers.map(answer => `
+            <button class="answer" data-dessert="${answer.dessert}" data-question="${index}">${answer.text}</button>`
+            ).join('')}
             </div>
-        `;
-        
-        DOMSelectors.quizContainer.insertAdjacentHTML("beforeend", questionDiv);
-    });
+        </div>`
+)});
 
         DOMSelectors.quizContainer.insertAdjacentHTML("beforeend", 
             `<button class="submit">submit</button>`
@@ -46,7 +42,8 @@ document.querySelector(".btn").addEventListener("click", function (){
         if (selectedAnswers.length < questions.length) {
             alert("Please answer all the questions before submitting your result.");
             return; 
-        }
+        } 
+        
         
         const dessertCounts = { blueberry: 0, strawberry: 0, tiramisu: 0, cherryPie: 0};
         
@@ -58,6 +55,7 @@ document.querySelector(".btn").addEventListener("click", function (){
 
         };
 
+        
         selectedAnswers.forEach(dessert => {
             dessertCounts[dessert]++;
         });
