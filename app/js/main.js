@@ -55,13 +55,14 @@ document.querySelector(".btn").addEventListener("click", function (){
 
         };
 
-        
-        selectedAnswers.forEach(dessert => {
-            dessertCounts[dessert]++;
-        });
-
         let resultDessert = '';
         let maxCount = 0;
+        
+        function peach (selectedAnswers) {
+            selectedAnswers.forEach(dessert => {
+            dessertCounts[dessert]++;
+        });
+        
         for (let dessert in dessertCounts) {
             if (dessertCounts[dessert] > maxCount) {
                 maxCount = dessertCounts[dessert];
@@ -69,6 +70,10 @@ document.querySelector(".btn").addEventListener("click", function (){
             }
         }
 
+        }
+
+        peach (selectedAnswers);
+        
         const percentage = (maxCount / selectedAnswers.length) * 100;
 
         const resultDescription = dessertDescriptions[resultDessert];
